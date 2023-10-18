@@ -1,0 +1,269 @@
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=FONTS =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* Big Shoulders Display */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Outfit:wght@100;300;500;700;900&display=swap');
+
+/* Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap');
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-= CONSTANTS =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+:root{
+  --goldish-yellow:#d5966c;
+  --background:#fcfaf9;
+  --black-Big-Text:#151515;
+  --white:#ffffff;
+  --black-Small-Text:#444444;
+}
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-= GENERAL SETTINGS =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 16/10 = 62.5 */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=MAP SECTION=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+header {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  /* background-image: url(assets/mobile/image-map.png); */
+} 
+nav {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.text__link {
+  font-family: "Big Shoulders Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.363636rem;
+  color: var(--white);
+  padding: 2.4rem 3.2rem;
+  background: var(--black-Big-Text);
+  display: inline-block;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+nav img {
+  box-sizing: content-box;
+  /* border: 1px solid #ffffff; */
+  background: var(--goldish-yellow);
+  padding: 2.4rem;
+  width: 0.8rem;
+  height: 2.4rem;
+  display: block;
+}
+
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=LOCATION SECTION=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+article {
+  padding: 4.8rem 1.6rem 5.6rem 1.6rem;
+  background: var(--black-Big-Text);
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  height: 100vh;
+}
+h1 {
+  font-family: "Big Shoulders Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 90%;
+  text-transform: uppercase;
+  color: var(--white);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+h2 {
+  font-family: "Big Shoulders Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 100%;
+  color: var(--goldish-yellow);
+  text-transform: uppercase;
+}
+article p {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 156%;
+  color: var(--white);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=FOOTER=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+footer {
+  width: 100%;
+  padding: 4.8rem 3.2rem;
+  background: var(--goldish-yellow);
+  display: flex;
+  flex-direction: column;
+  gap: 3.8rem;
+  justify-content: space-between;
+  height: 100vh;
+}
+.brand-logo-dark {
+  width: 11.005rem;
+  height: 4rem;
+}
+footer p {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 162%;
+  color: var(--black-Big-Text);
+}
+.logos {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+
+.logos a i{
+  margin-right: 5%;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+}
+.logos a {
+  text-decoration: none;
+}
+
+.logos a i:hover{
+  color: var(--white);
+  transition: 0.6s;
+}
+
+.logo-white {
+  display: none;
+}
+
+
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=RESPONSIVE SETTINGS=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+@media screen and (min-width: 768px) {
+  nav {
+    left: 39px;
+    top: 0px;
+  }
+  .map-phone {
+    display: none;
+  }
+  .map-tablet {
+    display: block;
+  }
+  .map-desktop {
+    display: none;
+  }
+  article {
+    padding: 8rem 4rem;
+    background: var(--black-Big-Text);
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+    gap: 6.8rem;
+  }
+  footer {
+    padding: 5.6rem 4rem;
+    flex-direction: row;
+    gap: 10rem;
+  }
+  h1 {
+    font-size: 5.5rem;
+    line-height: 91%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  nav {
+    left: 156px;
+    top: 0px;
+  }
+  nav:hover {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  nav:hover .test {
+    background: var(--black-Big-Text);
+  }
+  nav:hover .text__link {
+    background: var(--goldish-yellow);
+  }
+
+  .map-phone {
+    display: none;
+  }
+  .map-tablet {
+    display: none;
+  }
+  .map-desktop {
+    display: block;
+  }
+  article {
+    padding: 12rem 16.5rem;
+    background: var(--black-Big-Text);
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+    gap: 22rem;
+  }
+  h1 {
+    font-size: 7rem;
+    line-height: 100%;
+  }
+  h2 {
+    font-size: 3.6rem;
+    line-height: 100%;
+  }
+  article p {
+    font-size: 22px;
+    line-height: 145%;
+  }
+  footer {
+    padding: 8rem 16.5rem;
+    flex-direction: row;
+    gap: 23rem;
+  }
+  .logos a i:hover {
+    cursor: pointer;
+  }
+  .logos a i:hover path {
+    cursor: pointer;
+    fill: var(--white);
+    transition: 0.6s;
+  }
+  .brand-logo-dark {
+    width: 11.005rem;
+    height: 5.8rem;
+    width: 16rem;
+  }
+}
