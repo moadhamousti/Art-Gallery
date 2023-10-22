@@ -19,7 +19,6 @@
 </p>
 
 
-
 <p align="center">
   <img width="948" alt="2" src="https://github.com/moadhamousti/Art-Gallery/assets/118165767/11333b85-c158-406d-bcc3-696c4fbee43a">
 </p>
